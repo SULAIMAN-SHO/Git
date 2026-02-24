@@ -121,6 +121,39 @@
         <code>git checkout -b new_branch_test</code>
     </p>
 
+
+
+    <p>
+        إعادة تسمية الفرع الحالي إلى "main" بالقوة حتى لو كان الاسم موجود مسبقًا <br>
+        فعلنا ذلك عن طريق وضع حرف الـ M كبير <br>
+        <code>git branch -M main</code>
+    </p>
+
+    <p>
+        إضافة مستودع بعيد (remote) وربطه بالمشروع المحلي باسم "origin" <br>
+        <code>git remote add origin https://github.com/SULAIMAN-SHO/Git.git</code> <br>
+        فعلنا ذلك عن طريق تحديد الرابط الخاص بالمستودع على GitHub وربطه باسم "origin"
+    </p>
+
+
+    <p>
+        رفع الفرع
+        "main"
+        إلى المستودع البعيد
+        "origin"
+        وربطه كفرع افتراضي
+        <code>git push -u origin main</code> <br>
+        فعلنا ذلك عن طريق استخدام الخيار <code>-u</code> ليتم تعيين "main" كفرع افتراضي للعمليات القادمة
+    </p>
+
+    <p>
+        رفع الفرع "main" إلى المستودع البعيد "origin" وربطه كفرع افتراضي للعمليات القادمة <br>
+        <code>git push -u origin main</code> <br>
+        فعلنا ذلك عن طريق استخدام الخيار <code>-u</code> ليتم تعيين "main" كفرع افتراضي بحيث في المستقبل يكفي كتابة
+        <code>git push</code> أو <code>git pull</code> بدون تحديد اسم الفرع
+    </p>
+
+
     <script src="script.js"></script>
 </body>
 
