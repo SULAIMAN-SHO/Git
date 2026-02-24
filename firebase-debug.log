@@ -1,0 +1,55 @@
+[debug] [2026-02-24T03:34:15.830Z] ----------------------------------------------------------------------
+[debug] [2026-02-24T03:34:15.832Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SULAIMAN SHO\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-02-24T03:34:15.833Z] CLI Version:   15.7.0
+[debug] [2026-02-24T03:34:15.833Z] Platform:      win32
+[debug] [2026-02-24T03:34:15.833Z] Node Version:  v22.16.0
+[debug] [2026-02-24T03:34:15.833Z] Time:          Tue Feb 24 2026 06:34:15 GMT+0300 (غرينتش+٠٣:٠٠)
+[debug] [2026-02-24T03:34:15.833Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\SULAIMAN SHO\Desktop\Git & Github
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2026-02-24T03:34:24.556Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-24T03:34:24.556Z] > authorizing via signed-in user (sulaiman.sho.2020@gmail.com)
+[debug] [2026-02-24T03:34:32.583Z] Checked if tokens are valid: true, expires at: 1771907501926
+[debug] [2026-02-24T03:34:32.583Z] Checked if tokens are valid: true, expires at: 1771907501926
+[debug] [2026-02-24T03:34:32.585Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-02-24T03:34:32.585Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"sulaiman-sho-git"}
+[debug] [2026-02-24T03:34:33.073Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2026-02-24T03:34:33.073Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_AVAILABLE","suggestedProjectId":"sulaiman-sho-git"}
+[debug] [2026-02-24T03:34:34.483Z] Checked if tokens are valid: true, expires at: 1771907501926
+[debug] [2026-02-24T03:34:34.483Z] Checked if tokens are valid: true, expires at: 1771907501926
+[debug] [2026-02-24T03:34:34.483Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2026-02-24T03:34:34.483Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"sulaiman-sho-git","name":"sulaiman-sho-git"}
+[debug] [2026-02-24T03:34:35.518Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2026-02-24T03:34:35.518Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.7149900681377684015"}
+[debug] [2026-02-24T03:34:35.519Z] Checked if tokens are valid: true, expires at: 1771907501926
+[debug] [2026-02-24T03:34:35.519Z] Checked if tokens are valid: true, expires at: 1771907501926
+[debug] [2026-02-24T03:34:35.519Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7149900681377684015 [none]
+[debug] [2026-02-24T03:34:36.371Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7149900681377684015 200
+[debug] [2026-02-24T03:34:36.371Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7149900681377684015 {"name":"operations/create_project.global.7149900681377684015","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":8,"message":"The project cannot be created because you have exceeded your allotted project quota.","details":[{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"description":"The project cannot be created because you have exceeded your allotted project quota."}]}]}}
+[debug] [2026-02-24T03:34:36.373Z] FirebaseError: The project cannot be created because you have exceeded your allotted project quota.
+    at OperationPoller.poll (C:\Users\SULAIMAN SHO\AppData\Roaming\npm\node_modules\firebase-tools\lib\operation-poller.js:25:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createCloudProject (C:\Users\SULAIMAN SHO\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:237:29)
+    at async createFirebaseProjectAndLog (C:\Users\SULAIMAN SHO\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:102:9)
+    at async Object.doSetup (C:\Users\SULAIMAN SHO\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:64:24)
+    at async init (C:\Users\SULAIMAN SHO\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:92:13)
+    at async Command.initAction [as actionFn] (C:\Users\SULAIMAN SHO\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\init.js:231:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
